@@ -123,3 +123,72 @@ INSERT INTO payment_details (order_id, payment_date, amount, payment_method) VAL
 (8, NOW(), 99.99, 'PayPal'),
 (9, NOW(), 79.99, 'Debit Card'),
 (10, NOW(), 399.99, 'Credit Card');
+
+INSERT INTO products (name, description, price, stock_quantity) VALUES
+('E-Reader', 'Compact electronic book reader', 129.99, 80),
+('Fitness Tracker', 'Wearable fitness activity tracker', 59.99, 150),
+('Digital Camera', 'Compact digital camera with zoom lens', 299.99, 40),
+('Gaming Mouse', 'Ergonomic gaming mouse with customizable buttons', 49.99, 100),
+('Keyboard', 'Mechanical keyboard with backlit keys', 89.99, 75),
+('Webcam', 'High-definition webcam', 69.99, 85),
+('Smart TV', '4K Ultra HD Smart TV', 999.99, 30),
+('Router', 'High-speed wireless router', 119.99, 55),
+('Drone', 'Quadcopter drone with camera', 349.99, 25),
+('VR Headset', 'Virtual reality headset for immersive experiences', 399.99, 40);
+
+
+INSERT INTO customers (first_name, last_name, email, phone_number, address) VALUES
+('Alice', 'Wright', 'alice.wright@example.com', '888-777-6666', '200 Sunset Blvd, Sunville'),
+('Brian', 'Taylor', 'brian.taylor@example.com', '777-666-5555', '300 Moon St, Moonville'),
+('Catherine', 'Evans', 'catherine.evans@example.com', '666-555-4444', '400 Star Rd, Starville'),
+('Derek', 'Adams', 'derek.adams@example.com', '555-444-3333', '500 Sky Ave, Skytown'),
+('Evelyn', 'Baker', 'evelyn.baker@example.com', '444-333-2222', '600 Ocean Dr, Oceantown'),
+('Frank', 'Clark', 'frank.clark@example.com', '333-222-1111', '700 Mountain Ln, Mountaintown'),
+('Grace', 'Edwards', 'grace.edwards@example.com', '222-111-0000', '800 Forest Ct, Forestville'),
+('Henry', 'Fisher', 'henry.fisher@example.com', '111-000-9999', '900 River St, Rivertown'),
+('Isabel', 'Gibson', 'isabel.gibson@example.com', '000-999-8888', '1000 Lake Rd, Lakeville'),
+('Jack', 'Harris', 'jack.harris@example.com', '999-888-7777', '1100 Hill St, Hilltown');
+
+
+-- Note: Adjust 'customer_id' as per existing customer data
+INSERT INTO orders (customer_id, order_date, total_amount, status) VALUES
+(6, NOW(), 129.99, 'Processing'),
+(7, NOW(), 59.99, 'Shipped'),
+(8, NOW(), 299.99, 'Delivered'),
+(9, NOW(), 49.99, 'Processing'),
+(10, NOW(), 89.99, 'Delivered'),
+(6, NOW(), 69.99, 'Cancelled'),
+(7, NOW(), 999.99, 'Shipped'),
+(8, NOW(), 119.99, 'Processing'),
+(9, NOW(), 349.99, 'Delivered'),
+(10, NOW(), 399.99, 'Shipped');
+
+
+-- Note: Ensure 'order_id' and 'product_id' match existing records
+INSERT INTO order_items (order_id, product_id, quantity, price) VALUES
+(11, 11, 1, 129.99),
+(12, 12, 1, 59.99),
+(13, 13, 1, 299.99),
+(14, 14, 1, 49.99),
+(15, 15, 1, 89.99),
+(16, 16, 1, 69.99),
+(17, 17, 1, 999.99),
+(18, 18, 1, 119.99),
+(19, 19, 1, 349.99),
+(20, 20, 1, 399.99);
+
+
+-- Note: Adjust 'order_id' to match existing orders
+INSERT INTO payment_details (order_id, payment_date, amount, payment_method) VALUES
+(11, NOW(), 129.99, 'Credit Card'),
+(12, NOW(), 59.99, 'PayPal'),
+(13, NOW(), 299.99, 'Debit Card'),
+(14, NOW(), 49.99, 'Credit Card'),
+(15, NOW(), 89.99, 'PayPal'),
+(16, NOW(), 69.99, 'Debit Card'),
+(17, NOW(), 999.99, 'Credit Card'),
+(18, NOW(), 119.99, 'PayPal'),
+(19, NOW(), 349.99, 'Debit Card'),
+(20, NOW(), 399.99, 'Credit Card');
+
+
